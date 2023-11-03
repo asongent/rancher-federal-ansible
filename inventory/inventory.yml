@@ -1,0 +1,38 @@
+all:
+  hosts:
+    bigbang-master:
+      ansible_host: 192.168.1.70
+
+
+
+    bigbang-01:
+      ansible_host: 192.168.1.71
+    bigbang-02:
+      ansible_host: 192.168.1.72
+    bigbang-03:
+      ansible_host: 192.168.1.73
+    bigbang-04:
+      ansible_host: 192.168.1.74
+    bigbang-05:
+      ansible_host: 192.168.1.75
+    bigbang-06:
+      ansible_host: 192.168.1.76
+
+master:
+  hosts:
+    bigbang-master:
+
+
+worker:
+  hosts:
+    bigbang-01:
+    bigbang-02:
+    bigbang-03:
+    bigbang-04:
+    bigbang-05:
+    bigbang-06:
+
+rke2_cluster:
+  children:
+    master:
+    worker:
